@@ -89,6 +89,6 @@ if __name__ == "__main__":
     parser.add_argument('--algorithm', type=str, default='fedavg', choices=['fedavg', 'fedsgd'], help='federated algorithm')
 
     args = parser.parse_args()
-    print("running with {args.algorithm} algorithm")
+    print(f"running with {args.algorithm} algorithm")
 
     main(args)
