@@ -68,7 +68,7 @@ def main(args):
         if args.algorithm == 'fedavg':
             global_model = fedavg(local_models).to(device)
         elif args.algorithm == 'fedsgd':
-            global_model = fedsgd(global_model, local_gradients).to(device)
+            global_model = fedsgd(global_model, local_gradients, lr=args.lr).to(device)
 
         # Evaluate global model
         eval_trainer = Trainer(global_model, device)
