@@ -1,0 +1,32 @@
+Unet++
+    model = UNet++(in_channels=4, out_channels=3).to(device)
+    criterion = nn.BCEWithLogitsLoss()
+    optimizer = optim.Adam(model.parameters(), lr=learning_rate)
+Details:
+    batch_size = 16
+    num_epochs = 10
+    learning_rate = 3e-4
+    img_size = 240
+
+Mean Dice (DSC):
+  WT: 0.5356
+  TC: 0.6159
+  ET: 0.6943
+
+
+---------------------------------------------------------------------------
+
+
+Unet
+    model = UNet(in_channels=4, out_channels=3).to(device)
+    criterion = nn.BCEWithLogitsLoss()
+    optimizer = optim.Adam(model.parameters(), lr=learning_rate)
+Details:
+    batch_size = 16
+    num_epochs = 10
+    learning_rate = 3e-4
+    img_size = 240
+Mean Dice (DSC):
+  WT: 0.5160
+  TC: 0.5801
+  ET: 0.6828
